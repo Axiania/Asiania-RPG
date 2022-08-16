@@ -9,7 +9,7 @@ of variables, I kept changing them whenever I had extra time though still there 
 The purpose of Asiania was to replicate Valrise Roleplay and I have to say I succeeded in replicating
 almost 90 percent of Valrise. We have some extra features that they lack and they might have a few features that
 we lack but the important part is already done. You are free to use the script however to like though the credits
-should be given to Daryl and Truman for a few extra touches.
+should be given to Daryl and Truman (for a few extra touches with crates system).
 
 We have provided the database without passwords, serials and IP addresses of players. You can set yourself as an Owner
 by setting your admin_lvl field to 7 in users table. Join our discord server (https://discord.gg/BUUzCFeYWG) 
