@@ -1,7 +1,4 @@
-// Module For Textdraws - SpeedoMeter
-// Skripter: Lanmi
-// Textdraws: Ahmed Spahic
-
+//Replica of Valrise's speedometer
 
 
 //=====================[ DEFINES & Player Variables]=================================
