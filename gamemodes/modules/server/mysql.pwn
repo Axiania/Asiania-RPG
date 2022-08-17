@@ -1,31 +1,5 @@
 //=================================[ Defines ]====================================
-
-#define host
- 
-#if defined host
-	#define MYSQL_WRITE_LOG LOG_ERROR
-    #define MYSQL_HOST "localhost"
-    #define MYSQL_USER "root"
-    #define MYSQL_PASS ""
-    #define MYSQL_DB "magic"
-#endif
-
-#if defined host_test
-//	#define MYSQL_WRITE_LOG LOG_ALL
-    #define MYSQL_HOST "localhost"
-    #define MYSQL_USER "root"
-    #define MYSQL_PASS "2020meanwhilesmr434"
-    #define MYSQL_DB "testmeanwhile"
-#endif
-
-#if defined kucni
-//	#define MYSQL_WRITE_LOG LOG_ERROR
-    #define MYSQL_HOST "127.0.0.1"
-    #define MYSQL_USER "server_5059"
-    #define MYSQL_PASS "e3pnl81w97"
-    #define MYSQL_DB "server_5059_asian"
-#endif
-
+#define MYSQL_WRITE_LOG LOG_ERROR //LOG_ALL
 
 new _dbConnector, sql_str[ 128 ];
 
