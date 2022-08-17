@@ -20,10 +20,10 @@ any compiler or editor related help. Use the compiler version provided in the pa
 
 Join our discord server (https://discord.gg/BUUzCFeYWG) for any kind of help and support related to the script.
 
-# Screenshpts
-![alt text](https://github.com/Axiania/Asiania-RPG/tree/main/screenshots/sa-mp-080.png?raw=true)
-![alt text](https://github.com/Axiania/Asiania-RPG/tree/main/screenshots/sa-mp-081.png?raw=true)
-![alt text](https://github.com/Axiania/Asiania-RPG/tree/main/screenshots/sa-mp-082.png?raw=true)
-![alt text](https://github.com/Axiania/Asiania-RPG/tree/main/screenshots/sa-mp-083.png?raw=true)
-![alt text](https://github.com/Axiania/Asiania-RPG/tree/main/screenshots/sa-mp-084.png?raw=true)
-![alt text](https://github.com/Axiania/Asiania-RPG/tree/main/screenshots/sa-mp-085.png?raw=true)
+# Screenshots
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-080.png?raw=true)
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-081.png?raw=true)
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-082.png?raw=true)
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-083.png?raw=true)
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-084.png?raw=true)
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-085.png?raw=true)
