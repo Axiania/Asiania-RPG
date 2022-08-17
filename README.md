@@ -103,7 +103,11 @@ Join our discord server (https://discord.gg/BUUzCFeYWG) for any kind of help and
 ![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-090.png?raw=true)
 
 # Videos
-https://www.youtube.com/watch?v=ER5MYtb1uSA
-https://www.youtube.com/watch?v=FpEOcrYrdSQ
-https://www.youtube.com/watch?v=bX-Kj8h9daA
-https://www.youtube.com/watch?v=2tNkVeeknyg
+[![New Player Guide](https://yt-embed.herokuapp.com/embed?v=ER5MYtb1uSA)](https://www.youtube.com/watch?v=ER5MYtb1uSA "[Axiania RPG] New Player Guide
+")
+[![London View](https://yt-embed.herokuapp.com/embed?v=FpEOcrYrdSQ)](https://www.youtube.com/watch?v=FpEOcrYrdSQ "[Axiania:RPG] London View
+")
+[![Angaar](https://yt-embed.herokuapp.com/embed?v=bX-Kj8h9daA)](https://www.youtube.com/watch?v=bX-Kj8h9daA "[Axiania:RPG] Angaar
+")
+[![Surname](https://yt-embed.herokuapp.com/embed?v=2tNkVeeknyg)](https://www.youtube.com/watch?v=2tNkVeeknyg "[Axiania:RPG] Surname
+")
