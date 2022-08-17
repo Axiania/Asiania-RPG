@@ -27,3 +27,6 @@ Join our discord server (https://discord.gg/BUUzCFeYWG) for any kind of help and
 ![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-083.png?raw=true)
 ![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-084.png?raw=true)
 ![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-085.png?raw=true)
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-086.png?raw=true)
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-087.png?raw=true)
+![alt text](https://github.com/Axiania/Asiania-RPG/blob/main/screenshots/sa-mp-088.png?raw=true)
