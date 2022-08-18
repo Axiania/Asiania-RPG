@@ -840,8 +840,8 @@ async def stats(ctx,*, name=None ):
       playername=x[1]
       level=x[11]
       money=x[10]
-      hours=x[61]
-      lastlogin=x[83]
+      hours=x[38]
+      lastlogin=x[52]
       skin=x[17]
 
     cursor.execute("SELECT * FROM bank WHERE bankOwner = %s LIMIT 5", (user_id, ))
@@ -861,23 +861,23 @@ async def stats(ctx,*, name=None ):
 
 
     draw = ImageDraw.Draw(image) 
-    text = f' {playername}'
-    font = ImageFont.truetype("goodtimes.ttf", 37, encoding="unic")
+    text = f'Name: {playername}'
+    font = ImageFont.truetype("goodtimes.ttf", 45, encoding="unic")
 
     text_width, text_height = draw.textsize(text, font=font)
 
 
-    draw.text((620, 82), text, fill=(255,255,255,255), font=font)
-    text = f' {level}'
-    draw.text((628, 177), text, fill=(255,255,255,255), font=font)
-    text = f' {money}$'
-    draw.text((612, 260), text, fill=(255,255,255,255), font=font)
-    text = f' {bank}$'
-    draw.text((622, 348), text, fill=(255,255,255,255), font=font)
-    text = f' {hours}'
-    draw.text((805, 430), text, fill=(255,255,255,255), font=font)
-    text = f' {lastlogin}'
-    draw.text((760, 520), text, fill=(255,255,255,255), font=font)
+    draw.text((460, 100), text, fill=(255,255,255,255), font=font)
+    text = f'Level: {level}'
+    draw.text((460, 200), text, fill=(255,255,255,255), font=font)
+    text = f'Cash: {money}$'
+    draw.text((460, 300), text, fill=(255,255,255,255), font=font)
+    text = f'Bank: {bank}$'
+    draw.text((460, 400), text, fill=(255,255,255,255), font=font)
+    text = f'Hours Played: {hours}'
+    draw.text((460, 500), text, fill=(255,255,255,255), font=font)
+    text = f'Last Login: {lastlogin}'
+    draw.text((460, 600), text, fill=(255,255,255,255), font=font)
 
 
     imagelink = f'skins/{skin}.png'
