@@ -1176,7 +1176,7 @@ OnDialogResponseRent(playerid, dialogid, response, listitem, inputtext[]) {
 //=====================[ Commands ]================================
 CMD:checkrent( playerid )
 {
-	if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 4 ) return -1;
+	if(gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 4) return -1;
 	new id = GetNearestRentVehicle( playerid );
 	if(id == -1) return SendErrorMessage(playerid, "You are not close to vehicle rent area.");
 	SendInfoMessage(playerid, "Server sided ID: %d, Database ID: %d", id, gRentStation[id][vrSQLID]);
@@ -1212,7 +1212,7 @@ CMD:rentveh( playerid )
 
 CMD:arentveh( playerid )
 {
-    if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 4 ) return SendErrorMessage( playerid, "You do not have permission to use this command.");
+    if( gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 4 ) return SendErrorMessage( playerid, "You do not have permission to use this command.");
 	if( !AdminDuty[ playerid ] ) return SendErrorMessage( playerid, "You must be on admin duty!" );
 	if( !IsPlayerInAnyVehicle( playerid ) ) return SendErrorMessage( playerid, "You must be in the vehicle!" );
     new /*id = CreateRentID[ playerid ],*/ vehicleid = GetPlayerVehicleID( playerid );

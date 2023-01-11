@@ -771,7 +771,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 CMD:pubgstart(playerid, params[])
 {
-	if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 4) return SendErrorMessage( playerid, "You do not have permission to use this command." );
+	if( gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 4) return SendErrorMessage( playerid, "You do not have permission to use this command." );
 	if( EventInfo[ eID ] != 0 || EventInfo[ ec_Started ] > 0 || EventInfo[ edr_Started ] > 0 || deaglePokrenut > 0) return SendErrorMessage( playerid, "An event is already running, use /endevent." );
 	if(PUBGOpen || PUBGLaunched) return SendErrorMessage(playerid, "PUBG event has already started. Use /endpubg to end it.");
 
@@ -844,7 +844,7 @@ CMD:pubgstart(playerid, params[])
 
 CMD:endpubg(playerid)
 {
-	if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 4) return SendErrorMessage( playerid, "You do not have permission to use this command." );
+	if( gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 4) return SendErrorMessage( playerid, "You do not have permission to use this command." );
 	if(!PUBGOpen && !PUBGLaunched) return SendErrorMessage(playerid, "PUBG event is not running.");
 	KillTimer(PUBGcloseTimer);
 	PUBGLaunched = false;
@@ -871,7 +871,7 @@ CMD:endpubg(playerid)
 }
 CMD:addpubg(playerid, params[])
 {
-	if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 3 ) return -1;
+	if( gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 3 ) return -1;
 	if(!PUBGLaunched && PUBGOpen) return SendErrorMessage(playerid, "PUBG mode registration is still open. Tell them to /pubg instead.");
 	new playa;
 	if( sscanf( params, "u", playa ) ) {
@@ -983,7 +983,7 @@ CMD:pubg(playerid)
 }
 CMD:saveloot(playerid)
 {
-	if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 4) return SendErrorMessage( playerid, "You do not have permission to use this command." );
+	if( gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 4) return SendErrorMessage( playerid, "You do not have permission to use this command." );
 	if(Iter_Count(PUBGIterator) == MAX_LOOT) return SendErrorMessage(playerid, "Maximum number of loot is already set.");
 	new Float:x, Float:y, Float:z;
 	GetPlayerPos(playerid, x, y, z);
@@ -996,7 +996,7 @@ CMD:saveloot(playerid)
 }
 CMD:reloadloot(playerid)
 {
-	if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 4) return -1;
+	if( gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 4) return -1;
 	ReloadPUBGLoot();
 	SendInfoMessage(playerid, "You reloaded PUBG loot.");
 	return 1;

@@ -660,7 +660,7 @@ OnDialogResponsePV(playerid, dialogid, response, listitem, inputtext[]) {
 //=====================[ Commands ]================================
 
 CMD:savevehpos( playerid ) {
-	if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 7 ) return SendErrorMessage( playerid, "You are not authorized to use this command! ");
+	if( gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 7 ) return SendErrorMessage( playerid, "You are not authorized to use this command! ");
 	if( !IsPlayerInAnyVehicle(playerid) && GetPlayerState(playerid) != PLAYER_STATE_DRIVER ) return SendErrorMessage( playerid, "You are not in the vehicle or you are not in the driver's seat");
 	if( createPickupVehicle[ playerid ] == -1 ) return SendErrorMessage( playerid, "You are not in the process of creating a vehicle ");
 	new vehicleID = GetPlayerVehicleID(playerid), id = createPickupVehicle[ playerid ];
@@ -689,7 +689,7 @@ CMD:takeveh( playerid ) {
 		switch( VehiclePickupInfo[ id ][ piVeh_Usage ] ) {
 			case USAGE_VEHICLE_ADMIN: {
 				if( VehiclePickupInfo[ id ][ piVeh_Permission ] == PERM_ADMIN ) {
-					if(gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 1 ) 
+					if(gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 1 ) 
 						return SendErrorMessage( playerid, "You are not authorized to take an administrative vehicle");
 					if( PickupedVehicle[ playerid ] != -1 ) {
 						VehicleObjectCheck( PickupedVehicle[ playerid ] );
@@ -720,7 +720,7 @@ CMD:takeveh( playerid ) {
 			}
 			case USAGE_VEHICLE_HELPER: {
 				if( VehiclePickupInfo[ id ][ piVeh_Permission ] == PERM_HELPER ) {
-					if(gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 1 && gPlayerData[ playerid ][ E_PLAYER_HELPER ] < 1 ) 
+					if(gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 1 && gPlayerData[ playerid ][ E_PLAYER_HELPER ] < 1 ) 
 						return SendErrorMessage( playerid, "You are not authorized to take a helper vehicle");
 					if( PickupedVehicle[ playerid ] != -1 ) {
 						VehicleObjectCheck( PickupedVehicle[ playerid ] );
@@ -752,7 +752,7 @@ CMD:takeveh( playerid ) {
 			}
 			case USAGE_VEHICLE_VIP: {
 				if( VehiclePickupInfo[ id ][ piVeh_Permission ] == PERM_VIP ) {
-					if( gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 6 && gPlayerData[ playerid ][ E_PLAYER_VIP_LEVEL ] < 1 ) 
+					if( gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 6 && gPlayerData[ playerid ][ E_PLAYER_VIP_LEVEL ] < 1 ) 
 						return SendErrorMessage( playerid, "You are not authorized to take a VIP vehicle");
 					if( PickupedVehicle[ playerid ] != -1 ) {
 						VehicleObjectCheck( PickupedVehicle[ playerid ] );
@@ -785,7 +785,7 @@ CMD:takeveh( playerid ) {
 			}
 			case USAGE_VEHICLE_PROMOTER: {
 				if( VehiclePickupInfo[ id ][ piVeh_Permission ] == PERM_PROMOTER ) {
-					if(gPlayerData[ playerid ][ E_PLAYER_ADMIN_LEVEL ] < 6 && gPlayerData[ playerid ][ E_PLAYER_SPECIAL_LEVEL ] < 1 ) 
+					if(gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 6 && gPlayerData[ playerid ][ E_PLAYER_SPECIAL_LEVEL ] < 1 ) 
 						return SendErrorMessage( playerid, "You are not authorized to take a promoter vehicle");
 					if( PickupedVehicle[ playerid ] != -1 ) {
 						VehicleObjectCheck( PickupedVehicle[ playerid ] );

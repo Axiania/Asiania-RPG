@@ -114,7 +114,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				}
 				gPlayerData[playerid][E_PLAYER_CRATE] = gCratesDepot[i][E_CRATE_DEPOT_TYPE];
 				SetPlayerSpecialAction( playerid, SPECIAL_ACTION_CARRY);
-				SetPlayerAttachedObject( playerid, OBJECT_SLOT_BADGE, 3052, 1, 0.15, 0.4, 0.0, 0.0, 90.0, 0.0, 1.0, 1.0, 1.0 );
+				SetPlayerAttachedObject( playerid, FREE_ATTACHMENT_SLOT_1, 3052, 1, 0.15, 0.4, 0.0, 0.0, 90.0, 0.0, 1.0, 1.0, 1.0 );
 				LastTaken[playerid] = GetTickCount();
 				GivePlayerMoneyEx( playerid, -gCratesDepot[i][E_CRATE_DEPOT_PRICE]);
 				gCratesDepot[i][E_CRATE_DEPOT_AMOUNT]--;
@@ -133,7 +133,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				{
 					gPlayerData[playerid][E_PLAYER_CRATE] = gDroppedCrates[i][E_CRATE_DROP_TYPE];
 					SetPlayerSpecialAction( playerid, SPECIAL_ACTION_CARRY);
-					SetPlayerAttachedObject( playerid, OBJECT_SLOT_BADGE, 3052, 1, 0.15, 0.4, 0.0, 0.0, 90.0, 0.0, 1.0, 1.0, 1.0 );
+					SetPlayerAttachedObject( playerid, FREE_ATTACHMENT_SLOT_1, 3052, 1, 0.15, 0.4, 0.0, 0.0, 90.0, 0.0, 1.0, 1.0, 1.0 );
 					LastTaken[playerid] = GetTickCount();
 
 					gDroppedCrates[i][E_CRATE_DROP_TYPE] = 0;
@@ -185,7 +185,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				GroupInventory_Add( group, "Material", 18633, 25 );
 				gPlayerData[playerid][E_PLAYER_CRATE] = e_CRATE_TYPE_NONE;
 				SetPlayerSpecialAction(playerid, 0);
-				RemovePlayerAttachedObject( playerid, OBJECT_SLOT_BADGE );
+				RemovePlayerAttachedObject( playerid, FREE_ATTACHMENT_SLOT_1 );
 				format( globalstring, sizeof( globalstring ), "%s puts a material crate in the HQ.", PlayerMaskedName( playerid ) );
 				RangeMessage(20.0 , playerid, globalstring );
 				return 1;
@@ -231,7 +231,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 				gPlayerData[playerid][E_PLAYER_CRATE] = e_CRATE_TYPE_NONE;
 				SetPlayerSpecialAction(playerid, 0);
-				RemovePlayerAttachedObject( playerid, OBJECT_SLOT_BADGE );
+				RemovePlayerAttachedObject( playerid, FREE_ATTACHMENT_SLOT_1 );
 				format( globalstring, sizeof( globalstring ), "%s puts a cocaine crate in the HQ.", PlayerMaskedName( playerid ) );
 				RangeMessage(20.0 , playerid, globalstring );
 				return 1;
@@ -246,7 +246,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		if (gVehicleData[vehicleid][E_VEHICLE_CRATE_TYPE] != gPlayerData[playerid][E_PLAYER_CRATE] && gVehicleData[vehicleid][E_VEHICLE_CRATE_TYPE] != 0) return SendErrorMessage( playerid, "There can be only one type of crate in the truck at a time." );
 		if (gVehicleData[vehicleid][E_VEHICLE_CRATES] >= GetTruckWeight(vehicleid)) return SendErrorMessage( playerid, "There are already maximum boxes in this truck." );
 		
-		RemovePlayerAttachedObject(playerid, OBJECT_SLOT_BADGE);
+		RemovePlayerAttachedObject(playerid, FREE_ATTACHMENT_SLOT_1);
 		SetPlayerSpecialAction(playerid, 0);
 
 		gVehicleData[vehicleid][E_VEHICLE_CRATE_TYPE] = gPlayerData[playerid][E_PLAYER_CRATE];
@@ -298,7 +298,7 @@ hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 		
 		gPlayerData[playerid][E_PLAYER_CRATE] = gVehicleData[vehicleid][E_VEHICLE_CRATE_TYPE];
 		SetPlayerSpecialAction( playerid, SPECIAL_ACTION_CARRY);
-		SetPlayerAttachedObject( playerid, OBJECT_SLOT_BADGE, 3052, 1, 0.15, 0.4, 0.0, 0.0, 90.0, 0.0, 1.0, 1.0, 1.0 );
+		SetPlayerAttachedObject( playerid, FREE_ATTACHMENT_SLOT_1, 3052, 1, 0.15, 0.4, 0.0, 0.0, 90.0, 0.0, 1.0, 1.0, 1.0 );
 		
 		gVehicleData[vehicleid][E_VEHICLE_CRATES] -= 5;
 
@@ -347,7 +347,7 @@ hook OnPlayerEnterDynArea(playerid, STREAMER_TAG_AREA areaid)
 
 				gPlayerData[playerid][E_PLAYER_CRATE] = e_CRATE_TYPE_NONE;
 				SetPlayerSpecialAction(playerid, 0);
-				RemovePlayerAttachedObject( playerid, OBJECT_SLOT_BADGE );
+				RemovePlayerAttachedObject( playerid, FREE_ATTACHMENT_SLOT_1 );
 				format( globalstring, sizeof( globalstring ), "%s puts a crate in the warehouse.", PlayerMaskedName( playerid ) );
 				RangeMessage(20.0 , playerid, globalstring );
 
@@ -378,7 +378,7 @@ CMD:dropcrate(playerid)
 				return SendErrorMessage(playerid, "You cannot drop a crate close to the crate depot. Move away a little.");
 			}
 		}
-		RemovePlayerAttachedObject( playerid, OBJECT_SLOT_BADGE );
+		RemovePlayerAttachedObject( playerid, FREE_ATTACHMENT_SLOT_1 );
 		SetPlayerSpecialAction(playerid, 0);
 		new
 			i = Iter_Free(i_Crates);

@@ -1,5 +1,5 @@
 #include <YSI_Coding\y_hooks>
-#define MAX_PLAYER_ATTACHED_ITEMS	10
+#define MAX_PLAYER_ATTACHED_ITEMS	8
 //------------------------------------------------------------------------------
 
 forward OnLoadPlayerAttachments(playerid);
