@@ -24,8 +24,7 @@ on a low-end VPS. I ran it on my OVH VPS with 2GB ram for almost a year. The ser
 
 # How to use
 
-We have provided the database without passwords, serials and IP addresses of players. You can set yourself as an Owner
-by setting your admin_lvl field to 7 in users table. Import asiania.sql to your database and update your credentials 
+You can set yourself as an Owner by setting your admin_lvl field to 7 in accounts table. Import asiania.sql to your database and update your credentials 
 in scriptfiles > Mysql.ini. It is recommended to edit the gamemode with sublime text to avoid issues. We won't provide
 any compiler or editor related help. Use the compiler version provided in the pawno folder with sublime text.
 
@@ -33,6 +32,7 @@ Join our discord server (https://discord.gg/BUUzCFeYWG) for any kind of help and
 
 # Features
 
+- Master account system. Create 3 different characters on 1 master account.
 - A player can join up to 10 groups.
 - Ability to join 10 walkie talkie frequencies at a time.
 - Dynamic Billboards and Graffitis
