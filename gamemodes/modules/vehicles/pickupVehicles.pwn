@@ -720,7 +720,7 @@ CMD:takeveh( playerid ) {
 			}
 			case USAGE_VEHICLE_HELPER: {
 				if( VehiclePickupInfo[ id ][ piVeh_Permission ] == PERM_HELPER ) {
-					if(gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 1 && gPlayerData[ playerid ][ E_PLAYER_HELPER ] < 1 ) 
+					if(gMasterAccount[ playerid ][ E_MASTER_ACC_ADMIN_LEVEL ] < 1 && gMasterAccount[ playerid ][ E_MASTER_ACC_HELPER ] < 1 ) 
 						return SendErrorMessage( playerid, "You are not authorized to take a helper vehicle");
 					if( PickupedVehicle[ playerid ] != -1 ) {
 						VehicleObjectCheck( PickupedVehicle[ playerid ] );
