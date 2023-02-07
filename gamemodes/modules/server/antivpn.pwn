@@ -34,7 +34,7 @@ public CheckVPN( playerid ) {
 	cache_get_data( rows, fields, _dbConnector );
 
 	if( !rows ) {
-		if(ServerInfo[ VpnKick ] == 1)
+		if(ServerInfo[ E_SERVER_VPN_KICK ] == 1)
 		{
 			SendClientMessage( playerid, REDCOLOR, "You have been kicked for using a VPN.");
 			SendClientMessage(playerid, REDCOLOR, "You can get yourself added to VPN list at https://discord.gg/GSk4uKwjxG" );
