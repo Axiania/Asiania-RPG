@@ -420,7 +420,7 @@ OnDialogResponsePV(playerid, dialogid, response, listitem, inputtext[]) {
 	} 
 	else if( dialogid == dialog_VEHTYPE_JOB  ) {
 	    if( response ) {
-	        if( ServerInfo[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
+	        if( gServerData[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
 		    new idauta, posao, Float:PozX, Float:PozY, Float:PozZ, boja1, boja2;
 		    GetPlayerPos( playerid, PozX, PozY, PozZ );
 		    if(carspawntimer == 1)
@@ -468,7 +468,7 @@ OnDialogResponsePV(playerid, dialogid, response, listitem, inputtext[]) {
 	}
 	else if( dialogid == dialog_VEHTYPE_ADMIN  ) {
 	    if( response ) {
-	        if( ServerInfo[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
+	        if( gServerData[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
 		    new idauta, Float:PozX, Float:PozY, Float:PozZ, boja1, boja2;
 		    GetPlayerPos( playerid, PozX, PozY, PozZ );
 		    if(carspawntimer == 1)
@@ -515,7 +515,7 @@ OnDialogResponsePV(playerid, dialogid, response, listitem, inputtext[]) {
 	}
 	else if( dialogid == dialog_VEHTYPE_HELPER  ) {
 	    if( response ) {
-	        if( ServerInfo[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
+	        if( gServerData[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
 		    new idauta, Float:PozX, Float:PozY, Float:PozZ, boja1, boja2;
 		    GetPlayerPos( playerid, PozX, PozY, PozZ );
 		    if(carspawntimer == 1)
@@ -562,7 +562,7 @@ OnDialogResponsePV(playerid, dialogid, response, listitem, inputtext[]) {
 	}
 	else if( dialogid == dialog_VEHTYPE_VIP  ) {
 	    if( response ) {
-	        if( ServerInfo[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
+	        if( gServerData[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
 		    new idauta, Float:PozX, Float:PozY, Float:PozZ, boja1, boja2;
 		    GetPlayerPos( playerid, PozX, PozY, PozZ );
 		    if(carspawntimer == 1)
@@ -609,7 +609,7 @@ OnDialogResponsePV(playerid, dialogid, response, listitem, inputtext[]) {
 	}
 	else if( dialogid == dialog_VEHTYPE_PROMOTER  ) {
 	    if( response ) {
-	        if( ServerInfo[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
+	        if( gServerData[ E_SERVER_VEHICLE_COUNTER ] > MAX_SERVER_VEHICLES ) return SCM( playerid, ANTICHEAT, "[ANTICHEAT]"col_white" It is currently impossible to create a vehicle, the vehicle limit on the server has been reached.");
 		    new idauta, Float:PozX, Float:PozY, Float:PozZ, boja1, boja2;
 		    GetPlayerPos( playerid, PozX, PozY, PozZ );
 		    if(carspawntimer == 1)
