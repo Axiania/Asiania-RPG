@@ -28,7 +28,7 @@ You can set yourself as an Owner by setting your admin_lvl field to 7 in account
 in scriptfiles > Mysql.ini. It is recommended to edit the gamemode with sublime text to avoid issues. We won't provide
 any compiler or editor related help. Use the compiler version provided in the pawno folder with sublime text.
 
-Join our discord server (https://discord.gg/BUUzCFeYWG) for any kind of help and support related to the script.
+Send me a message on discord (Daryl#1019) for any kind of help and support related to the script.
 
 # Features
 
